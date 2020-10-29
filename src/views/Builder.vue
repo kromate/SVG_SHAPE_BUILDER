@@ -330,18 +330,11 @@ export default {
 </script>
 
 <style>
-* {
-  overflow-x: hidden;
-  text-align: center;
-  transition: 0.3s;
-  font-size: 14px;
-  letter-spacing: 3px;
-  font-weight: 400;
-  font-family: sans-serif;
-}
+
 body {
   user-select: none;
   background-color: #cdbfe6;
+  background-color: #6e1cfa;
 }
 #svg {
   width: 30rem;
