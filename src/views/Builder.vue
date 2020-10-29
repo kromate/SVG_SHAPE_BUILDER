@@ -69,6 +69,20 @@
               />
             </td>
           </tr>
+          <tr>
+            <th>Stroke Color</th>
+            <th><output for="scolor" id="scolor"></output></th>
+            <td>
+              <input type="color" name="scolor" value="#000000" @change="prepearDraw()" />
+            </td>
+          </tr>
+          <tr>
+            <th>Fill Color</th>
+            <th><output for="fcolor" id="fcolor"></output></th>
+            <td>
+              <input type="color" name="fcolor" value="#ffffff" @change="prepearDraw()" />
+            </td>
+          </tr>
         </table>
       </div>
     </div>
@@ -115,29 +129,43 @@ export default {
       var svgData = this.serializeXmlNode(svg);
 
       var canvas = document.createElement("canvas");
+      console.log("helllo");
 
       canvas.width = 410;
       canvas.height = 410;
       var ctx = canvas.getContext("2d");
       var dataUri = "";
       try {
+        console.log("hel");
         dataUri = "data:image/svg+xml;base64," + btoa(svgData);
+        console.log("hel2");
       } catch (ex) {
         alert(`your browser probably doesn't support btoa() method`);
       }
       var img = document.createElement("img");
-      img.onload = function() {
+      console.log("img");
+      console.log(dataUri);
+
+      var a = document.createElement("a");
+      a.download = "polygon.svg";
+      a.href = dataUri;
+      a.click();
+      img.onload = () => {
+        console.log("0");
         ctx.drawImage(img, 0, 0);
         try {
           // Try to initiate a download of the image
-          img.src = dataUri;
           var a = document.createElement("a");
+          console.log("1");
           a.download = "polygon.png";
           a.href = dataUri;
+          console.log("2");
           document.querySelector("body").appendChild(a);
           a.click();
+          console.log("3");
           document.querySelector("body").removeChild(a);
         } catch (ex) {
+          console.log("failed");
           // If downloading not possible (as in IE due to canvas.toDataURL() security issue)
           // then display image for saving via right-click
           var imgPreview = document.createElement("div");
@@ -145,7 +173,6 @@ export default {
           document.querySelector("body").appendChild(imgPreview);
         }
       };
-      console.log(dataUri);
     },
     simulatePathDrawing(path) {
       var length = path.getTotalLength();
@@ -187,7 +214,7 @@ export default {
         c += parseInt(Math.random() * 0.5 + 0.5 * 1000) / 1000 + ")";
         return c;
       } else {
-        return this.fill;
+        return this.stroke;
       }
     },
 
@@ -270,11 +297,16 @@ export default {
       let minR = document.querySelector("input[name='minR']").value;
       let lines = document.querySelector("input[name='lines']").value;
       let rotateEach = document.querySelector("input[name='rotateEach']").value;
+      let stroke = document.querySelector("input[name='scolor']").value;
+      let fill = document.querySelector("input[name='fcolor']").value;
+      console.log(stroke, fill);
       this.corners = corners;
       this.r = r;
       this.minR = minR;
       this.lines = lines;
       this.rotateEach = rotateEach;
+      this.fill = fill;
+      this.stroke = stroke;
       this.draw();
     },
 
@@ -301,7 +333,11 @@ export default {
 * {
   overflow-x: hidden;
   text-align: center;
-  transition: 0.5s;
+  transition: 0.3s;
+  font-size: 14px;
+  letter-spacing: 3px;
+  font-weight: 400;
+  font-family: sans-serif;
 }
 body {
   user-select: none;
