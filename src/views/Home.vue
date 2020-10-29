@@ -18,12 +18,15 @@ export default {
       display: flex;
       flex-direction: column;
       /* background-color: blueviolet; */
-      overflow: hidden;
+      overflow-x: hidden;
       align-items: center;
       justify-content: center;
       transition: 1s ease;
-      background-color: rgb(5, 5, 5);
+      background-color: rgb(5, 5, 5) !important;
 
+    }
+    html{
+      width: 100%;
     }
 
     main {
@@ -37,16 +40,17 @@ export default {
       border-radius: 35px;
       box-shadow: 2px 3px 19px 2px;
       transition: 5s;
+      
       -webkit-text-stroke-color: #6e1cfa;
-      -webkit-text-stroke-width: 1px;
-      -webkit-text-fill-color: rgb(8, 8, 8);
+      // -webkit-text-stroke-width: 0.5px;
+      // -webkit-text-fill-color: rgb(8, 8, 8);
     }
 
     main p {
 
       text-align: center;
       font-size: 20rem;
-      padding: 2rem;
+      padding: 1rem;
       /* margin: 0; */
       margin: 1rem auto;
       text-shadow: 1px -1px 9px;
@@ -186,15 +190,21 @@ background-color: #eaf818;
     }
     @media screen and (max-width: 430px) {
       .di {
-        font-size: 5rem;
+        font-size: 4rem;
       }
+    }
+    .cont{
+      font-size:16px;
+      color: #6e1cfa !important;
     }
   </style>
 
   <div class="wrapper">
     <main>
       <p id="draw" class="di">Welcome</p>
-      <div>This is my Submission for the Frontend developer challenge posted by Cozzbie on twitter</div>
+      <div class='cont'>This is my Submission for the Frontend developer challenge posted by Cozzbie on twitter <br/>
+      all requirement has been met including those for bonus points
+      </div>
        <div class="CBtn">
       <a href="/builder"><button class="custom-btn btn-13">View Shape Builder</button></a>
       <a href="https://wa.me/2348146923944"><button class="custom-btn btn-14">Contact</button></a>

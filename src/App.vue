@@ -6,8 +6,6 @@
 body {
   user-select: none;
   background-color: #cdbfe6 !important;
-}
-* {
   overflow-x: hidden;
   text-align: center;
   transition: 0.3s;

@@ -10,7 +10,7 @@
             <th colspan="2"><h2 class="header">Parameters</h2></th>
             <td>
               <button class="btn btn-success random" @click="setRandom()">Random</button>
-              <button class="btn save btn-primary" @click="exportPNG()">Save PNG</button>
+              <button class="btn save btn-primary" @click="exportPNG()">Save SVG</button>
             </td>
           </tr>
           <tr>
@@ -29,9 +29,11 @@
           </tr>
           <tr>
             <th>Radius</th>
-            <th><output for="r" id="r"></output></th>
+            <th>
+              <output for="r" id="r"></output>
+            </th>
             <td>
-              <input type="range" name="r" min="0" max="200" value="150" @change="prepearDraw()" />
+              <input type="range" name="r" min="0" max="200" @change="prepearDraw()" />
             </td>
           </tr>
           <tr>
@@ -88,8 +90,9 @@
     </div>
     <div class="row col">
       <h1>The SVG Code</h1>
+      <h4>You can change the code direct from here to see it's effects</h4>
       <div style="overflow:auto" class="col-md-12">
-        <textarea name="" id="svg" cols="30" rows="10"></textarea>
+        <textarea name="" id="svg" cols="30" rows="10" @change="keyPress"></textarea>
       </div>
     </div>
   </div>
@@ -129,43 +132,33 @@ export default {
       var svgData = this.serializeXmlNode(svg);
 
       var canvas = document.createElement("canvas");
-      console.log("helllo");
 
       canvas.width = 410;
       canvas.height = 410;
       var ctx = canvas.getContext("2d");
       var dataUri = "";
       try {
-        console.log("hel");
         dataUri = "data:image/svg+xml;base64," + btoa(svgData);
-        console.log("hel2");
       } catch (ex) {
         alert(`your browser probably doesn't support btoa() method`);
       }
       var img = document.createElement("img");
-      console.log("img");
-      console.log(dataUri);
 
       var a = document.createElement("a");
       a.download = "polygon.svg";
       a.href = dataUri;
       a.click();
       img.onload = () => {
-        console.log("0");
         ctx.drawImage(img, 0, 0);
         try {
           // Try to initiate a download of the image
           var a = document.createElement("a");
-          console.log("1");
           a.download = "polygon.png";
           a.href = dataUri;
-          console.log("2");
           document.querySelector("body").appendChild(a);
           a.click();
-          console.log("3");
           document.querySelector("body").removeChild(a);
         } catch (ex) {
-          console.log("failed");
           // If downloading not possible (as in IE due to canvas.toDataURL() security issue)
           // then display image for saving via right-click
           var imgPreview = document.createElement("div");
@@ -299,7 +292,6 @@ export default {
       let rotateEach = document.querySelector("input[name='rotateEach']").value;
       let stroke = document.querySelector("input[name='scolor']").value;
       let fill = document.querySelector("input[name='fcolor']").value;
-      console.log(stroke, fill);
       this.corners = corners;
       this.r = r;
       this.minR = minR;
@@ -322,6 +314,10 @@ export default {
       });
       this.prepearDraw();
     },
+
+    keyPress(e) {
+      document.querySelector(".svg").innerHTML = e.target.value;
+    },
   },
   mounted() {
     this.setRandom();
@@ -330,7 +326,6 @@ export default {
 </script>
 
 <style>
-
 body {
   user-select: none;
   background-color: #cdbfe6;
