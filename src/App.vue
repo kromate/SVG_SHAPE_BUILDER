@@ -3,6 +3,7 @@
 </template>
 
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Galada&display=swap");
 body {
   user-select: none;
   background-color: #cdbfe6 !important;

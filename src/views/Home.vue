@@ -11,6 +11,7 @@ export default {
       const view = document.querySelector("body");
       view.innerHTML = `
      <style>
+     @import url('https://fonts.googleapis.com/css2?family=Galada&display=swap');
     body {
       font-family: 'Galada', cursive;
       width: 100%;

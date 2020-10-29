@@ -30,7 +30,7 @@
           <tr>
             <th>Radius</th>
             <th>
-              <output for="r" id="r"></output>
+              <output for="r.value" id="r"></output>
             </th>
             <td>
               <input type="range" name="r" min="0" max="200" @change="prepearDraw()" />
