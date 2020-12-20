@@ -1,0 +1,77 @@
+<template>
+  <g>
+    <ellipse
+      class="cls-2"
+      stroke="#000"
+      stroke-miterlimit="10"
+      stroke-width="0.85px"
+      cx="220.1"
+      cy="952.84"
+      rx="32.38"
+      ry="34.67"
+    />
+    <ellipse
+      class="cls-3"
+      fill="#fff"
+      stroke-width="0.85px"
+      stroke-miterlimit="10"
+      stroke="#000"
+      cx="229.93"
+      cy="935.94"
+      rx="5.97"
+      ry="6.39"
+    />
+    <rect
+      class="cls-4"
+      fill="none"
+      stroke="#000"
+      stroke-miterlimit="10"
+      stroke-width="0.85px"
+      x="147.33"
+      y="892.36"
+      width="145.55"
+      height="120.96"
+      rx="59.86"
+    />
+    <ellipse
+      class="cls-2"
+      stroke="#000"
+      stroke-miterlimit="10"
+      stroke-width="0.85px"
+      cx="438.88"
+      cy="952.84"
+      rx="32.38"
+      ry="34.67"
+    />
+    <ellipse
+      class="cls-3"
+      fill="#fff"
+      stroke-width="0.85px"
+      stroke-miterlimit="10"
+      stroke="#000"
+      cx="452.51"
+      cy="935.94"
+      rx="5.97"
+      ry="6.39"
+    />
+    <rect
+      class="cls-4"
+      fill="none"
+      stroke="#000"
+      stroke-miterlimit="10"
+      stroke-width="0.85px"
+      x="366.11"
+      y="892.36"
+      width="145.55"
+      height="120.96"
+      rx="59.86"
+      transform="translate(877.76 1905.68) rotate(-180)"
+    />
+  </g>
+</template>
+
+<script>
+export default {};
+</script>
+
+<style></style>

@@ -32,18 +32,25 @@
 export default {
   name: "Builder",
   data() {
-    return {
-      Brow: "first",
-      Ear: "first",
-      Eye: "first",
-      Glass: "first",
-      Hair: "first",
-      Head: "first",
-      Mouth: "first",
-    };
+    return {};
   },
+  methods: {
+    show() {
+      let svg = document.querySelector(".svg");
+      let text = document.querySelector("#svg");
+      let person = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080">
 
-  mounted() {},
+</svg>`;
+      svg.innerHTML = person;
+      text.innerHTML = person;
+    },
+    keyPress(e) {
+      document.querySelector(".svg").innerHTML = e.target.value;
+    },
+  },
+  mounted() {
+    this.show();
+  },
 };
 </script>
 

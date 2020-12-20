@@ -1,0 +1,80 @@
+<template>
+  <g>
+    <ellipse
+      class="cls-10"
+      stroke-width="0.98px"
+      stroke-miterlimit="10"
+      stroke="#000"
+      fill="#fff"
+      cx="129.53"
+      cy="482.33"
+      rx="55.94"
+      ry="64.18"
+    />
+    <path
+      class="cls-11"
+      fill="#080808"
+      d="M165.19,489.85c0,21.87-16,39.61-35.66,39.61s-35.66-17.74-35.66-39.61a44.19,44.19,0,0,1,.64-7.52h70A44.19,44.19,0,0,1,165.19,489.85Z"
+    />
+    <path
+      class="cls-12"
+      stroke-width="1.08px"
+      stroke-miterlimit="10"
+      stroke="#080808"
+      fill="none"
+      d="M185.47,482.33H73.59c0-35.45,25-64.18,55.94-64.18S185.47,446.88,185.47,482.33Z"
+    />
+    <line
+      class="cls-13"
+      stroke-width="5.42px"
+      stroke-miterlimit="10"
+      stroke="#000"
+      fill="none"
+      x1="73.59"
+      y1="482.33"
+      x2="185.47"
+      y2="482.33"
+    />
+    <ellipse
+      class="cls-10"
+      stroke-width="0.98px"
+      stroke-miterlimit="10"
+      stroke="#000"
+      fill="#fff"
+      cx="303.61"
+      cy="482.33"
+      rx="55.94"
+      ry="64.18"
+    />
+    <path
+      class="cls-11"
+      fill="#080808"
+      d="M339.27,489.85c0,21.87-16,39.61-35.66,39.61S268,511.72,268,489.85a44.19,44.19,0,0,1,.64-7.52h70A44.19,44.19,0,0,1,339.27,489.85Z"
+    />
+    <path
+      class="cls-12"
+      stroke-width="1.08px"
+      stroke-miterlimit="10"
+      stroke="#080808"
+      fill="none"
+      d="M359.55,482.33H247.67c0-35.45,25-64.18,55.94-64.18S359.55,446.88,359.55,482.33Z"
+    />
+    <line
+      class="cls-14"
+      stroke-width="5.42px"
+      stroke-miterlimit="10"
+      stroke="#000"
+      fill="none"
+      x1="359.55"
+      y1="482.33"
+      x2="247.67"
+      y2="482.33"
+    />
+  </g>
+</template>
+
+<script>
+export default {};
+</script>
+
+<style></style>
