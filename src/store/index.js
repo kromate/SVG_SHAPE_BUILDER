@@ -11,6 +11,9 @@ export default createStore({
     Mouth: "first",
   },
   mutations: {
+    changeEyes(state, number){
+      state.Eye = number
+    }
   },
   actions: {
   },

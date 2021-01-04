@@ -3,9 +3,9 @@
     <firstHead />
     <firstEar />
     <firstBrow />
-    <firstEyes />
+    <Eyes />
     <firstMouth />
-    <firstGlasses />
+    <firstGlasses v-if="true" />
     <firstHair />
   </svg>
 </template>
@@ -13,14 +13,14 @@
 <script>
 import firstHead from "@/parts/head/firstHead.vue";
 import FirstEar from "@/parts/ears/firstEar.vue";
-import FirstEyes from "@/parts/eyes/firstEyes.vue";
+import Eyes from "@/parts/eyes";
 import FirstBrow from "@/parts/brows/firstBrow.vue";
 import FirstMouth from "@/parts/mouth/firstMouth.vue";
 import FirstGlasses from "@/parts/glasses/firstGlasses.vue";
-import FirstHair from "../parts/hair/firstHair.vue";
+import FirstHair from "@/parts/hair/firstHair.vue";
 export default {
   name: "face",
-  components: { firstHead, FirstEar, FirstBrow, FirstEyes, FirstMouth, FirstGlasses, FirstHair },
+  components: { firstHead, FirstEar, FirstBrow, Eyes, FirstMouth, FirstGlasses, FirstHair },
 };
 </script>
 

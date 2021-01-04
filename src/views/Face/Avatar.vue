@@ -29,6 +29,7 @@
               </select>
             </td>
           </tr>
+          <box />
         </table>
       </div>
     </div>
@@ -38,9 +39,10 @@
 
 <script>
 import Face from "./Face.vue";
+import box from "@/components/container/index.vue";
 export default {
   name: "Builder",
-  components: { Face },
+  components: { Face, box },
   data() {
     return {};
   },
@@ -50,6 +52,13 @@ export default {
 </script>
 
 <style>
+select {
+  box-shadow: 1px 2px 4px #000;
+  outline: none;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
 body {
   user-select: none;
   background-color: #cdbfe6;

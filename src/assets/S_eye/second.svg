@@ -1,55 +1,20 @@
-<template>
-  <g>
-    <svg x="406.66" y="436.78">
-      <path
+<svg width="254" height="52" viewBox="0 0 254 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
         d="M36.3239 1H25.6761C12.0478 1 1 12.0478 1 25.6761V26.1872C1 39.8154 12.0478 50.8633 25.6761 50.8633H36.3239C49.9522 50.8633 61 39.8154 61 26.1872V25.6761C61 12.0478 49.9522 1 36.3239 1Z"
-        fill="white"
-        stroke="black"
-        stroke-width="0.85"
-        stroke-miterlimit="10"
-      />
-      <path
+        fill="white" stroke="black" stroke-width="0.85" stroke-miterlimit="10" />
+    <path
         d="M30.9979 40.2236C38.3698 40.2236 44.3459 33.8249 44.3459 25.9317C44.3459 18.0384 38.3698 11.6396 30.9979 11.6396C23.626 11.6396 17.6499 18.0384 17.6499 25.9317C17.6499 33.8249 23.626 40.2236 30.9979 40.2236Z"
-        fill="black"
-        stroke="black"
-        stroke-width="0.85"
-        stroke-miterlimit="10"
-      />
-      <path
+        fill="black" stroke="black" stroke-width="0.85" stroke-miterlimit="10" />
+    <path
         d="M35.0501 21.5991C36.4093 21.5991 37.5111 20.4198 37.5111 18.965C37.5111 17.5102 36.4093 16.3308 35.0501 16.3308C33.6909 16.3308 32.5891 17.5102 32.5891 18.965C32.5891 20.4198 33.6909 21.5991 35.0501 21.5991Z"
-        fill="white"
-        stroke="black"
-        stroke-width="0.85"
-        stroke-miterlimit="10"
-      />
-      <path
+        fill="white" stroke="black" stroke-width="0.85" stroke-miterlimit="10" />
+    <path
         d="M217.676 50.8633L228.324 50.8633C241.952 50.8633 253 39.8154 253 26.1872V25.676C253 12.0478 241.952 1 228.324 1L217.676 1C204.048 1 193 12.0478 193 25.676V26.1872C193 39.8154 204.048 50.8633 217.676 50.8633Z"
-        fill="white"
-        fill-opacity="0.99"
-        stroke="black"
-        stroke-width="0.85"
-        stroke-miterlimit="10"
-      />
-      <path
+        fill="white" fill-opacity="0.99" stroke="black" stroke-width="0.85" stroke-miterlimit="10" />
+    <path
         d="M223.002 40.2236C230.374 40.2236 236.35 33.8249 236.35 25.9317C236.35 18.0384 230.374 11.6396 223.002 11.6396C215.63 11.6396 209.654 18.0384 209.654 25.9317C209.654 33.8249 215.63 40.2236 223.002 40.2236Z"
-        fill="black"
-        stroke="black"
-        stroke-width="0.85"
-        stroke-miterlimit="10"
-      />
-      <path
+        fill="black" stroke="black" stroke-width="0.85" stroke-miterlimit="10" />
+    <path
         d="M228.621 21.5991C229.98 21.5991 231.082 20.4198 231.082 18.965C231.082 17.5102 229.98 16.3308 228.621 16.3308C227.262 16.3308 226.16 17.5102 226.16 18.965C226.16 20.4198 227.262 21.5991 228.621 21.5991Z"
-        fill="white"
-        stroke="black"
-        stroke-width="0.85"
-        stroke-miterlimit="10"
-      />
-    </svg>
-  </g>
-</template>
-
-<script>
-export default {};
-</script>
-
-<style></style>
+        fill="white" stroke="black" stroke-width="0.85" stroke-miterlimit="10" />
+</svg>
