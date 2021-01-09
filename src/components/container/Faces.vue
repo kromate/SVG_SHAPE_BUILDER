@@ -1,6 +1,6 @@
 <template>
   <div class="flex">
-    <button v-for="(eye, index) in Eyes" :key="index" class="box" @click="change(eye.name)">
+    <button v-for="(eye, index) in Faces" :key="index" class="box" @click="change(eye.name)">
       <img :src="eye.img" alt="" />
     </button>
   </div>
@@ -11,22 +11,22 @@ export default {
   name: "boxEyes",
   data() {
     return {
-      Eyes: [
+      Faces: [
         { name: "none", img: require("@/assets/none.svg") },
-        { name: "first", img: require("@/assets/S_eye/first.svg") },
-        { name: "second", img: require("@/assets/S_eye/second.svg") },
-        { name: "third", img: require("@/assets/S_eye/third.svg") },
-        { name: "fourth", img: require("@/assets/S_eye/fourth.svg") },
-        { name: "fifth", img: require("@/assets/S_eye/fifth.svg") },
-        { name: "sixth", img: require("@/assets/S_eye/sixth.svg") },
-        { name: "seventh", img: require("@/assets/S_eye/seventh.svg") },
+        { name: "first", img: require("@/assets/S_face/first.svg") },
+        { name: "second", img: require("@/assets/S_face/second.svg") },
+        { name: "third", img: require("@/assets/S_face/third.svg") },
+        { name: "fourth", img: require("@/assets/S_face/fourth.svg") },
+        { name: "fifth", img: require("@/assets/S_face/fifth.svg") },
+        { name: "sixth", img: require("@/assets/S_face/sixth.svg") },
+        { name: "seventh", img: require("@/assets/S_face/seventh.svg") },
       ],
     };
   },
 
   methods: {
     change(number) {
-      this.$store.commit("changeEyes", number);
+      this.$store.commit("changeHead", number);
     },
   },
 };
@@ -56,7 +56,7 @@ export default {
   cursor: pointer;
 }
 img {
-  width: 45px;
-  height: 45px;
+  width: 25px;
+  height: 25px;
 }
 </style>

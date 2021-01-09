@@ -18,14 +18,14 @@
           <tr>
             <th colspan="2"><h2 class="header">Parts</h2></th>
             <td>
-              <select name="" id="">
-                <option value="head">Brow</option>
-                <option value="ear">Ear</option>
-                <option value="eye">Eye</option>
-                <option value="glass">Glass</option>
-                <option value="hair">Hair</option>
-                <option value="head">Head</option>
-                <option value="mouth">Mouth</option>
+              <select name="" id="" @change="updatePart($event)" v-model="visible">
+                <option value="brows">Brow</option>
+                <option value="ears">Ear</option>
+                <option value="eyes">Eye</option>
+                <option value="glasses">Glass</option>
+                <option value="hairs">Hair</option>
+                <option value="heads">Head</option>
+                <option value="mouths">Mouth</option>
               </select>
             </td>
           </tr>
@@ -45,6 +45,17 @@ export default {
   components: { Face, box },
   data() {
     return {};
+  },
+  computed: {
+    visible() {
+      return this.$store.state.visiblePart;
+    },
+  },
+  methods: {
+    updatePart(e) {
+      console.log(e.target.value);
+      this.$store.commit("updateVisiblePart", e.target.value);
+    },
   },
 
   mounted() {},

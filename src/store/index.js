@@ -9,11 +9,20 @@ export default createStore({
     Hair: "first",
     Head: "first",
     Mouth: "first",
+
+    visiblePart:'heads'
   },
   mutations: {
     changeEyes(state, number){
       state.Eye = number
+    },
+    changeHead(state, number){
+      state.Head = number
+    },
+    updateVisiblePart(state, part){
+      state.visiblePart = part 
     }
+    
   },
   actions: {
   },
