@@ -4,6 +4,7 @@
       <div>
         <div class="svg"></div>
       </div>
+      
       <div>
         <table class="table">
           <tr>
